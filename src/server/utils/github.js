@@ -69,6 +69,7 @@ module.exports = {
     })
   },
 
+  
   delete: function(files, message) {
     return fetchTree()
       .then(function(tree) {
