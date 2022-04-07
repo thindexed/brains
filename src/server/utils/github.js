@@ -14,6 +14,7 @@ if(GITHUB_TOKEN === null) {
   console.log('Upload of Shapes to the Repo is not possible due of missing GITHUB_TOKEN environment variable.')
 }
 else {
+  console.log(`Using github org/repo: ${GITHUB_ORG}/${GITHUB_REPO} to push the data`)
   octokat = new Octokat({ token: GITHUB_TOKEN});
   repo = octokat.repos(GITHUB_ORG, GITHUB_REPO);
 }
