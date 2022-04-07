@@ -5,7 +5,7 @@ const express = require('express')
 const app = express()
 const http = require('http').Server(app)
 const bodyParser = require('body-parser')
-const generator = require("./thumbnails")
+
 const globalApi = require("./data/global")
 const userApi = require("./data/user")
 const conf = require("./configuration")
@@ -42,5 +42,5 @@ async function  runServer() {
   });
 }
 
-generator.generateShapeIndex(conf.absoluteGlobalDataDirectory())
+
 runServer()

@@ -1,10 +1,9 @@
 const fs = require('fs-extra')
 const path = require('path')
-const glob = require("glob")
 
 const filesystem = require("../utils/file")
 const github = require('../utils/github')
-const generator = require("../thumbnails")
+
 const conf = require("../configuration")
 
 function nocache(req, res, next) {
