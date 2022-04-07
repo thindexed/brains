@@ -4,7 +4,6 @@ const Octokat = require('octokat')
 let octokat = null
 let repo = null
 
-
 const GITHUB_ORG = process.env.GITHUB_ORG || 'thindexed'
 const GITHUB_REPO = process.env.GITHUB_REPO || 'shapes'
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || null
