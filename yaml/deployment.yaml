@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: brains
-        image: docker.io/freegroup/thindexed-brains:0.1.0-1
+        image: docker.io/freegroup/thindexed-brains:0.1.0-5
         envFrom:
         - secretRef:
             name: github-secrets
