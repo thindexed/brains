@@ -1,10 +1,8 @@
 const path = require('path')
 const Octokat = require('octokat')
-const GitHub = require('github-api')
 
 let octokat = null
 let repo = null
-let gh = null
 
 const GITHUB_ORG = process.env.GITHUB_ORG || 'thindexed'
 const GITHUB_REPO = process.env.GITHUB_REPO || 'shapes'
@@ -18,8 +16,6 @@ if(GITHUB_TOKEN === null) {
 else {
   octokat = new Octokat({ token: GITHUB_TOKEN});
   repo = octokat.repos(GITHUB_ORG, GITHUB_REPO);
-  gh = new GitHub({ token: GITHUB_TOKEN}).getRepo(GITHUB_ORG, GITHUB_REPO)
-
 }
 
 function fetchHead() {
@@ -69,7 +65,7 @@ module.exports = {
     })
   },
 
-  
+
   delete: function(files, message) {
     return fetchTree()
       .then(function(tree) {
