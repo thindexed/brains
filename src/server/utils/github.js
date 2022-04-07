@@ -62,10 +62,11 @@ module.exports = {
         parents: [ head.object.sha ]
       });
     }).then(function(commit) {
+      console.log("files commited: ", files)
       return repo.git.refs.heads(GITHUB_BRANCH).update({
         sha: commit.sha
       });
-    });
+    })
   },
 
   delete: function(files, message) {
