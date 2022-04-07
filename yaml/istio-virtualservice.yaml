@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: brains
+  namespace: default
+spec:
+  hosts: ["app.<DOMAIN>"]
+  #hosts: ["app.thindexed.personal.shoot.canary.k8s-hana.ondemand.com"]
+  gateways: [ "gateway-app" ]
+  http:
+    - match:
+      - uri:
+          prefix: "/brains"
+      rewrite:
+        uri: "/brains"
+      route:
+        - destination:
+            host: brains
+

@@ -1,0 +1,11 @@
+secrets
+
+src/common
+src/data/
+data/index.js
+data/index.json
+
+
+# dotenv environment variables file
+.env
+.env.test

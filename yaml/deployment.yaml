@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brains
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: brains
+  template:
+    metadata:
+      labels:
+        name: brains
+    spec:
+      containers:
+      - name: brains
+        image: docker.io/freegroup/thindexed-shapes:0.1.0-341
+        envFrom:
+        - secretRef:
+            name: github-secrets
+        env:
+        - name: SIMULATOR_URL
+          value: "https://app.<DOMAIN>/circuit"
+        - name: DATA_DIR
+          value: "/app/data/"
+        resources:
+          limits:
+            cpu: "2"
+            memory: 1Gi
+          requests:
+            cpu: "2"
+            memory: 1Gi
