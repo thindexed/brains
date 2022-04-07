@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: brains
-        image: docker.io/freegroup/thindexed-brains:0.1.0-12
+        image: docker.io/freegroup/thindexed-brains:0.1.0-16
         envFrom:
         - secretRef:
             name: github-secrets
@@ -24,6 +24,10 @@ spec:
           value: "https://app.<DOMAIN>/circuit"
         - name: DATA_DIR
           value: "/app/data/"
+        - name: GITHUB_REPO
+          value: brains
+        - name: GITHUB_ORG
+          value: thindexed
         resources:
           limits:
             cpu: "2"
