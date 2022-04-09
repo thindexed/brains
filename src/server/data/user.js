@@ -69,15 +69,22 @@ module.exports = {
                     })
             }
             else {
-                let files = [fileRelativePath,
-                   // fileRelativePath.replace(".shape", ".png")
-                ]
-                let promisses = files.map(file => filesystem.delete(conf.absoluteUserDataDirectory(req), file))
-                Promise.allSettled(promisses)
+
+                filesystem.delete(conf.absoluteUserDataDirectory(req), fileRelativePath)
                     .then((sanitizedRelativePaths) => {
-                        console.log(sanitizedRelativePaths)
-                        github.delete(files.map(file => { return { path: path.join(conf.githubUserDataDirectory(req), file) } }), "-empty-")
-                        res.send("ok")
+                        files = [sanitizedRelativePaths]
+                        let tutorialRelativePath = sanitizedRelativePaths.replace(".brain", ".guide")
+                        filesystem.delete(conf.absoluteUserDataDirectory(req), tutorialRelativePath)
+                        .then((guideRelativePAth)=>{
+                            files.push(guideRelativePAth)
+                        }).catch (()=>{
+                            // ignore "not found" error
+                        })
+                        .finally (()=> {
+                            github.delete(files.map(file => { return { path: path.join(conf.githubUserDataDirectory(req), file) } }), "-empty-")
+                            .catch( ()=>{ /* ignore */})
+                            res.send("ok")
+                        })
                     })
                     .catch(() => {
                         res.status(403).send("error")
@@ -99,17 +106,24 @@ module.exports = {
                         })
                     }
                     else {
-                        let fromFiles = [
-                            repoFromRelativePath,
-                            //repoFromRelativePath.replace(".shape", ".png")
-                        ]
-                        let toFiles = [
-                            repoToRelativePath,
-                            //repoToRelativePath.replace(".shape", ".png")
-                        ]
-                        github.renameFiles(fromFiles, toFiles, "-rename-")
-                        .catch( error => { 
-                            console.log(error) 
+                        let fromFiles = [repoFromRelativePath]
+                        let toFiles = [repoToRelativePath]
+                        let tutorialRelativeFromPath = repoFromRelativePath.replace(".brain", ".guide")
+                        let tutorialRelativeToPath = repoToRelativePath.replace(".brain", ".guide")
+                        filesystem.rename(conf.absoluteUserDataDirectory(req),tutorialRelativeFromPath, tutorialRelativeToPath)
+                        .then( (guideFromPath, guideToPath, isDir )=>{
+                            fromFiles.push(guideFromPath)
+                            toFiles.push(guideToPath)
+                        })
+                        .catch (()=>{
+                            // ignore "not found" error
+                        })
+                        .finally (()=> {
+                            // rename ALL files in one commit in github
+                            github.renameFiles(fromFiles, toFiles, ` ${fromRelativePath} => ${toRelativePath}`)
+                            .catch( error => { 
+                                console.log(error) 
+                            })
                         })
                     }
                 })
