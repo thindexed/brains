@@ -77,7 +77,7 @@ module.exports = {
                             // ignore "not found" error
                         })
                         .finally (()=> {
-                            github.delete(files.map(file => { return { path: path.join(conf.githubUserDataDirectory(req), file) } }), "-empty-")
+                            github.delete(files.map(file => { return { path: path.join(conf.githubUserDataDirectory(req), file) } }), `delete of file "${sanitizedRelativePaths}"`)
                             .catch( ()=>{ /* ignore */})
                             res.send("ok")
                         })
@@ -97,7 +97,7 @@ module.exports = {
 
                     if (isDir) {
                         // rename all files in github
-                        github.renameDirectory(repoFromRelativePath, repoToRelativePath, "-rename-")
+                        github.renameDirectory(repoFromRelativePath, repoToRelativePath, `rename ${repoFromRelativePath} => ${repoToRelativePath}`)
                         .catch(error => { 
                             console.log(error) 
                         })
