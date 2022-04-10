@@ -105,14 +105,15 @@ module.exports = {
                     else {
                         let fromFiles = [repoFromRelativePath]
                         let toFiles = [repoToRelativePath]
-                        let tutorialRelativeFromPath = repoFromRelativePath.replace(".brain", ".guide")
-                        let tutorialRelativeToPath = repoToRelativePath.replace(".brain", ".guide")
-                        filesystem.rename(conf.githubGlobalDataDirectory(),tutorialRelativeFromPath, tutorialRelativeToPath)
+                        let tutorialRelativeFromPath = fromRelativePath.replace(".brain", ".guide")
+                        let tutorialRelativeToPath = toRelativePath.replace(".brain", ".guide")
+                        filesystem.rename(conf.absoluteGlobalDataDirectory(),tutorialRelativeFromPath, tutorialRelativeToPath)
                         .then( (guideFromPath, guideToPath, isDir )=>{
                             fromFiles.push(guideFromPath)
                             toFiles.push(guideToPath)
                         })
                         .catch (()=>{
+                            console.log("File not found for rename: ",tutorialRelativeFromPath,tutorialRelativeToPath)
                             // ignore "not found" error
                         })
                         .finally (()=> {

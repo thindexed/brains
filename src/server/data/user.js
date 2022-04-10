@@ -108,8 +108,8 @@ module.exports = {
                     else {
                         let fromFiles = [repoFromRelativePath]
                         let toFiles = [repoToRelativePath]
-                        let tutorialRelativeFromPath = repoFromRelativePath.replace(".brain", ".guide")
-                        let tutorialRelativeToPath = repoToRelativePath.replace(".brain", ".guide")
+                        let tutorialRelativeFromPath = fromRelativePath.replace(".brain", ".guide")
+                        let tutorialRelativeToPath = toRelativePath.replace(".brain", ".guide")
                         filesystem.rename(conf.absoluteUserDataDirectory(req),tutorialRelativeFromPath, tutorialRelativeToPath)
                         .then( (guideFromPath, guideToPath, isDir )=>{
                             fromFiles.push(guideFromPath)

@@ -116,32 +116,32 @@ module.exports = {
         res?.status(404).send('Not found')
         return reject(`'${file}' not found`)
       }
-      try {
-        let pngFile = file.replace(".shape",".png").replace(".brain",".png")
-        if(fs.existsSync(pngFile)) {
-          res?.sendFile(pngFile)
-          return resolve()
-        }
-        fs.readFile(file, (err, data) => {
-          let json = JSON.parse(data)
-          if (!json.image) {
-            res?.status(404).send('Not found')
-            return reject(`'${file}' not found`)
-          }
-          
-          let base64data = json.image.replace(/^data:image\/png;base64,/, '')
-          let img = Buffer.from(base64data, 'base64')
-          res?.writeHead(200, {
-            'Content-Type': 'image/png',
-            'Content-Length': img.length
-          })
-          res?.end(img)
-          resolve()
-        })
-      } catch (exc) {
-        res?.status(404).send(`not found`)
-        return reject(`'${file}' not found`)
+
+      let pngFile = file.replace(".shape",".png").replace(".brain",".png")
+      if(fs.existsSync(pngFile)) {
+        res?.sendFile(pngFile)
+        return resolve()
       }
+      fs.readFile(file)
+      .then( data => {
+        let json = JSON.parse(data)
+        if (!json.image) {
+          res?.status(404).send('Not found')
+          return reject(`'${file}' not found`)
+        }
+        
+        let base64data = json.image.replace(/^data:image\/png;base64,/, '')
+        let img = Buffer.from(base64data, 'base64')
+        res?.writeHead(200, {
+          'Content-Type': 'image/png',
+          'Content-Length': img.length
+        })
+        res?.end(img)
+        return resolve()
+      }).catch( err => {
+        res?.status(404).send('Not found')
+        return reject(file, err)
+      })
     })
   },
 
@@ -155,6 +155,7 @@ module.exports = {
    * @param res
    */
   rename: function (baseDir, fromRelativePath, toRelativePath, res=null) {
+    console.log("Rename: ", baseDir, fromRelativePath, toRelativePath)
     return new Promise( (resolve, reject) => {
       try {
         toRelativePath = sanitize(toRelativePath)
@@ -165,39 +166,39 @@ module.exports = {
         let toAbsoluteDir = path.dirname(toAbsolutePath)
     
         if (fromAbsolutePath !== sanitize(fromAbsolutePath)) {
-          res?.status(403).send('Unable to rename image')
-          return reject(`sanitized filepath '${fromAbsolutePath}' is different than the original file`)
+          res?.status(403).send('Invalid file name')
+          return reject(`sanitized from filepath '${fromAbsolutePath}' is different than the original file`)
 
         }
     
         // "from" must be exists
         if (!fs.existsSync(fromAbsolutePath)) {
-          res?.status(403).send('Unable to rename file')
-          return reject(`'${fromAbsolutePath}' not found`)
+          res?.status(403).send('Invalid file name')
+          return reject(`original file '${fromAbsolutePath}' not found`)
         }
     
         // check that the normalize path is the same the concatenated. It is possible the these are not the same
         // if the "from" contains dots like "/dir1/dir2/../../". It is a file path attack via API calls
         if (fromAbsolutePath !== path.normalize(fromAbsolutePath)) {
-          res?.status(403).send('Unable to rename file')
+          res?.status(403).send('Invalid file name')
           return reject(`normalized path of '${fromAbsolutePath}' is not equals to original filepath`)
         }
     
         if (toAbsolutePath !== path.normalize(toAbsolutePath)) {
-          res?.status(403).send('Unable to rename file')
+          res?.status(403).send('Invalid file name')
           return reject(`normalized path of '${toAbsolutePath}' is not equals to original filepath`)
         }
     
         // "from" and "to" directory must have the same parent directory. It is not allowed to move a directory out
         // of the tree with a rename operation
         if (fromAbsoluteDir !== toAbsoluteDir) {
-          res?.status(403).send('Unable to rename file')
+          res?.status(403).send('Invalid file name')
           return reject("moving files out of parent directory is not allowed")
         }
     
         if (fs.existsSync(toAbsolutePath)) {
-          res?.status(403).send('Unable to rename file')
-          return reject(`'${toAbsolutePath}' not found`)
+          res?.status(403).send('File already exists')
+          return reject(`Targe file '${toAbsolutePath}' already exists`)
         }
     
         mv(fromAbsolutePath, toAbsolutePath, err => {
@@ -349,22 +350,22 @@ module.exports = {
       }
   
       console.log("Write File: ", fileAbsolutePath)
-      fs.writeFile(fileAbsolutePath, content, err => {
-        if (err)  {
-          reject(err)
-          res?.status(403).send('Unable to write file')
-        }
-        else {
-          resolve(fileRelativePath)
-          res?.setHeader('Content-Type', 'application/json')
-          res?.send({
-            name: path.basename(fileRelativePath),
-            filePath: fileRelativePath,
-            folder:  path.dirname(fileRelativePath),
-            type: "file",
-            dir: false
-          })
-        }
+      return fs.writeFile(fileAbsolutePath, content)
+      .then( () => {
+        res?.setHeader('Content-Type', 'application/json')
+        res?.send({
+          name: path.basename(fileRelativePath),
+          filePath: fileRelativePath,
+          folder:  path.dirname(fileRelativePath),
+          type: "file",
+          dir: false
+        })
+        console.log("file written")
+        return resolve(fileRelativePath)
+      })
+      .catch( err => {
+        res?.status(403).send('Unable to write file')
+        return reject(err)
       })
     })
   }
