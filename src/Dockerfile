@@ -2,18 +2,10 @@ FROM --platform=linux/amd64 node:17-alpine
 
 WORKDIR /app
 
-RUN apk add --no-cache \
-      chromium \
-      nss \
-      freetype \
-      harfbuzz \
-      ca-certificates \
-      ttf-freefont
 
 COPY ./data ./data
 COPY server ./server
 COPY package.json .
-COPY package-lock.json .
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser

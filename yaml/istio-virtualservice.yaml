@@ -4,7 +4,7 @@ metadata:
   name: brains
   namespace: default
 spec:
-  hosts: ["app.<DOMAIN>"]
+  hosts: ["<DOMAIN>"]
   #hosts: ["app.thindexed.personal.shoot.canary.k8s-hana.ondemand.com"]
   gateways: [ "gateway-app" ]
   http:

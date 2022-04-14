@@ -15,13 +15,13 @@ spec:
     spec:
       containers:
       - name: brains
-        image: docker.io/freegroup/thindexed-brains:0.1.0-18
+        image: <OCIIMAGE>
         envFrom:
         - secretRef:
             name: github-secrets
         env:
         - name: SIMULATOR_URL
-          value: "https://app.<DOMAIN>/circuit"
+          value: "https://<DOMAIN>/circuit"
         - name: DATA_DIR
           value: "/app/data/"
         - name: GITHUB_REPO
