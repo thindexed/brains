@@ -36,7 +36,7 @@ module.exports = {
     return Promise.all(files.map(function(file) {
       return repo.git.blobs.create({
         content: file.content,
-        encoding: 'base64'
+        encoding: 'utf-8'
       });
     })).then(function(blobs) {
       return fetchTree().then(function(tree) {
@@ -59,7 +59,6 @@ module.exports = {
         parents: [ head.object.sha ]
       });
     }).then(function(commit) {
-      console.log("files commited: ", files)
       return repo.git.refs.heads(GITHUB_BRANCH).update({
         sha: commit.sha
       });
