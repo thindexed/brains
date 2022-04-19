@@ -1,7 +1,7 @@
 {
   "draw2d": [
     {
-      "type": "circuit_digital_gate_IEC60617_12_AND",
+      "type": "digital_gate_IEC60617_12_AND",
       "id": "5f6de876-f9cd-c366-4a6b-d05431ee8660",
       "x": 2940,
       "y": 2966,
@@ -12,9 +12,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/gate/AND.shape"
+        "file": "gate/AND.shape"
       },
-      "cssClass": "circuit_digital_gate_IEC60617_12_AND",
+      "cssClass": "digital_gate_IEC60617_12_AND",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -23,7 +23,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_display_Led",
+      "type": "digital_display_Led",
       "id": "0c73072c-21d0-f6a7-d133-36f00b29b89f",
       "x": 3099,
       "y": 2970,
@@ -34,9 +34,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/display/Led.shape"
+        "file": "display/Led.shape"
       },
-      "cssClass": "circuit_digital_display_Led",
+      "cssClass": "digital_display_Led",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -45,7 +45,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_buttons_PushButton",
+      "type": "digital_buttons_PushButton",
       "id": "f78ce91f-1dae-9298-805f-ed86fa46150b",
       "x": 2785,
       "y": 3069,
@@ -56,9 +56,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/switch/PushButton.shape"
+        "file": "switch/PushButton.shape"
       },
-      "cssClass": "circuit_digital_buttons_PushButton",
+      "cssClass": "digital_buttons_PushButton",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -68,7 +68,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_pulse_50hz",
+      "type": "digital_pulse_50hz",
       "id": "166f91e7-69d3-fc20-a100-3ce33682e56d",
       "x": 2785,
       "y": 2878,
@@ -79,9 +79,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/pulse/50hz.shape"
+        "file": "pulse/50hz.shape"
       },
-      "cssClass": "circuit_digital_pulse_50hz",
+      "cssClass": "digital_pulse_50hz",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,

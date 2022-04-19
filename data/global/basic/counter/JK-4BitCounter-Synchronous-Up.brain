@@ -1,7 +1,7 @@
 {
   "draw2d": [
     {
-      "type": "circuit_digital_flipflop_JKFlipFlop",
+      "type": "digital_flipflop_JKFlipFlop",
       "id": "9074a5f9-166e-02b8-39c3-ea534e040e49",
       "x": 2384.5,
       "y": 3213.8776000000016,
@@ -12,9 +12,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/flipflop/JKFlipFlop.shape"
+        "file": "flipflop/JKFlipFlop.shape"
       },
-      "cssClass": "circuit_digital_flipflop_JKFlipFlop",
+      "cssClass": "digital_flipflop_JKFlipFlop",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "type": "circuit_digital_flipflop_JKFlipFlop",
+      "type": "digital_flipflop_JKFlipFlop",
       "id": "e14ade16-ca14-77c4-fda5-ab0b30f9de93",
       "x": 2187.9802,
       "y": 3213.8776000000016,
@@ -64,9 +64,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/flipflop/JKFlipFlop.shape"
+        "file": "flipflop/JKFlipFlop.shape"
       },
-      "cssClass": "circuit_digital_flipflop_JKFlipFlop",
+      "cssClass": "digital_flipflop_JKFlipFlop",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "type": "circuit_digital_flipflop_JKFlipFlop",
+      "type": "digital_flipflop_JKFlipFlop",
       "id": "5db01c73-b36d-0dff-683b-c2d060c24978",
       "x": 2575.84193125,
       "y": 3213.8776000000016,
@@ -116,9 +116,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/flipflop/JKFlipFlop.shape"
+        "file": "flipflop/JKFlipFlop.shape"
       },
-      "cssClass": "circuit_digital_flipflop_JKFlipFlop",
+      "cssClass": "digital_flipflop_JKFlipFlop",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "type": "circuit_digital_flipflop_JKFlipFlop",
+      "type": "digital_flipflop_JKFlipFlop",
       "id": "1825da29-4da2-ea77-81f4-9d8e3918c40b",
       "x": 2770.78573125,
       "y": 3213.8776000000016,
@@ -168,9 +168,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/flipflop/JKFlipFlop.shape"
+        "file": "flipflop/JKFlipFlop.shape"
       },
-      "cssClass": "circuit_digital_flipflop_JKFlipFlop",
+      "cssClass": "digital_flipflop_JKFlipFlop",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -209,7 +209,7 @@
       ]
     },
     {
-      "type": "circuit_digital_gate_IEC60617_12_AND",
+      "type": "digital_gate_IEC60617_12_AND",
       "id": "3a29ff1b-e55f-a6c1-3905-26391080a943",
       "x": 2677,
       "y": 3163.1223999999984,
@@ -220,9 +220,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/gate/AND.shape"
+        "file": "gate/AND.shape"
       },
-      "cssClass": "circuit_digital_gate_IEC60617_12_AND",
+      "cssClass": "digital_gate_IEC60617_12_AND",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -231,7 +231,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_pulse_10hz",
+      "type": "digital_pulse_10hz",
       "id": "1d345c92-aed8-a3f4-2885-d3ae39a24ea4",
       "x": 2055,
       "y": 3366.8293000000003,
@@ -242,9 +242,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/pulse/10hz.shape"
+        "file": "pulse/10hz.shape"
       },
-      "cssClass": "circuit_digital_pulse_10hz",
+      "cssClass": "digital_pulse_10hz",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -254,7 +254,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_gate_IEC60617_12_AND",
+      "type": "digital_gate_IEC60617_12_AND",
       "id": "8fa8115d-caca-9e44-2e56-d36025c6382a",
       "x": 2468.9609375,
       "y": 3163.1223999999984,
@@ -265,9 +265,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/gate/AND.shape"
+        "file": "gate/AND.shape"
       },
-      "cssClass": "circuit_digital_gate_IEC60617_12_AND",
+      "cssClass": "digital_gate_IEC60617_12_AND",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,

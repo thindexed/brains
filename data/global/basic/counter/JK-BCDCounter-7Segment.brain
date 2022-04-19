@@ -51,7 +51,7 @@
       ]
     },
     {
-      "type": "circuit_digital_decoder_BCDto7Seg",
+      "type": "digital_decoder_BCDto7Seg",
       "id": "50d2f0d2-619b-de80-19af-596456cf9d7c",
       "x": 2949.8963,
       "y": 3002,
@@ -62,9 +62,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/digital/decoder/BCDto7Seg.shape"
+        "file": "digital/decoder/BCDto7Seg.shape"
       },
-      "cssClass": "circuit_digital_decoder_BCDto7Seg",
+      "cssClass": "digital_decoder_BCDto7Seg",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -73,7 +73,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_display_7Segment",
+      "type": "digital_display_7Segment",
       "id": "0f889018-8b53-5a08-6b27-7b7edd28ead5",
       "x": 3094.5892,
       "y": 3002,
@@ -84,9 +84,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/digital/display/7Segment.shape"
+        "file": "digital/display/7Segment.shape"
       },
-      "cssClass": "circuit_digital_display_7Segment",
+      "cssClass": "digital_display_7Segment",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -95,7 +95,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_flipflop_JKFlipFlop",
+      "type": "digital_flipflop_JKFlipFlop",
       "id": "9074a5f9-166e-02b8-39c3-ea534e040e49",
       "x": 2384.5,
       "y": 3213.8776000000016,
@@ -106,9 +106,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/flipflop/JKFlipFlop.shape"
+        "file": "flipflop/JKFlipFlop.shape"
       },
-      "cssClass": "circuit_digital_flipflop_JKFlipFlop",
+      "cssClass": "digital_flipflop_JKFlipFlop",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -147,7 +147,7 @@
       ]
     },
     {
-      "type": "circuit_digital_flipflop_JKFlipFlop",
+      "type": "digital_flipflop_JKFlipFlop",
       "id": "e14ade16-ca14-77c4-fda5-ab0b30f9de93",
       "x": 2187.9802,
       "y": 3213.8776000000016,
@@ -158,9 +158,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/flipflop/JKFlipFlop.shape"
+        "file": "flipflop/JKFlipFlop.shape"
       },
-      "cssClass": "circuit_digital_flipflop_JKFlipFlop",
+      "cssClass": "digital_flipflop_JKFlipFlop",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -199,7 +199,7 @@
       ]
     },
     {
-      "type": "circuit_digital_flipflop_JKFlipFlop",
+      "type": "digital_flipflop_JKFlipFlop",
       "id": "5db01c73-b36d-0dff-683b-c2d060c24978",
       "x": 2575.84193125,
       "y": 3213.8776000000016,
@@ -210,9 +210,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/flipflop/JKFlipFlop.shape"
+        "file": "flipflop/JKFlipFlop.shape"
       },
-      "cssClass": "circuit_digital_flipflop_JKFlipFlop",
+      "cssClass": "digital_flipflop_JKFlipFlop",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -251,7 +251,7 @@
       ]
     },
     {
-      "type": "circuit_digital_flipflop_JKFlipFlop",
+      "type": "digital_flipflop_JKFlipFlop",
       "id": "1825da29-4da2-ea77-81f4-9d8e3918c40b",
       "x": 2807.83533125,
       "y": 3213.8776000000016,
@@ -262,9 +262,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/flipflop/JKFlipFlop.shape"
+        "file": "flipflop/JKFlipFlop.shape"
       },
-      "cssClass": "circuit_digital_flipflop_JKFlipFlop",
+      "cssClass": "digital_flipflop_JKFlipFlop",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "type": "circuit_digital_gate_IEC60617_12_AND",
+      "type": "digital_gate_IEC60617_12_AND",
       "id": "78c392f8-ed6e-024d-5f30-9708e2ca9543",
       "x": 2278,
       "y": 3219.561199999999,
@@ -314,9 +314,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/gate/AND.shape"
+        "file": "gate/AND.shape"
       },
-      "cssClass": "circuit_digital_gate_IEC60617_12_AND",
+      "cssClass": "digital_gate_IEC60617_12_AND",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -325,7 +325,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_gate_IEC60617_12_AND",
+      "type": "digital_gate_IEC60617_12_AND",
       "id": "9ea8cdec-db56-49e5-41f4-93bedf4efae8",
       "x": 2486,
       "y": 3219.561199999999,
@@ -336,9 +336,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/gate/AND.shape"
+        "file": "gate/AND.shape"
       },
-      "cssClass": "circuit_digital_gate_IEC60617_12_AND",
+      "cssClass": "digital_gate_IEC60617_12_AND",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -347,7 +347,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_gate_IEC60617_12_AND",
+      "type": "digital_gate_IEC60617_12_AND",
       "id": "5cc047bc-2617-a1cb-6953-26adc020b2dd",
       "x": 2677,
       "y": 3100.746600000001,
@@ -358,9 +358,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/gate/AND.shape"
+        "file": "gate/AND.shape"
       },
-      "cssClass": "circuit_digital_gate_IEC60617_12_AND",
+      "cssClass": "digital_gate_IEC60617_12_AND",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -369,7 +369,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_gate_IEC60617_12_AND",
+      "type": "digital_gate_IEC60617_12_AND",
       "id": "3a29ff1b-e55f-a6c1-3905-26391080a943",
       "x": 2677,
       "y": 3163.1223999999984,
@@ -380,9 +380,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/gate/AND.shape"
+        "file": "gate/AND.shape"
       },
-      "cssClass": "circuit_digital_gate_IEC60617_12_AND",
+      "cssClass": "digital_gate_IEC60617_12_AND",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -391,7 +391,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_gate_IEC60617_12_OR",
+      "type": "digital_gate_IEC60617_12_OR",
       "id": "63a15275-9a5e-f93d-1238-b0963c29b27e",
       "x": 2739.5404,
       "y": 3151.1223999999984,
@@ -402,9 +402,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/gate/OR.shape"
+        "file": "gate/OR.shape"
       },
-      "cssClass": "circuit_digital_gate_IEC60617_12_OR",
+      "cssClass": "digital_gate_IEC60617_12_OR",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -413,7 +413,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_signal_High",
+      "type": "digital_signal_High",
       "id": "d2568131-8d6b-7977-d9e1-1cfbf1972632",
       "x": 2114.640625,
       "y": 3169.1223999999984,
@@ -426,7 +426,7 @@
       "userData": {
         "file": "signals/High.shape"
       },
-      "cssClass": "circuit_digital_signal_High",
+      "cssClass": "digital_signal_High",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -550,7 +550,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_pulse_10hz",
+      "type": "digital_pulse_10hz",
       "id": "1d345c92-aed8-a3f4-2885-d3ae39a24ea4",
       "x": 1882,
       "y": 3184.8293000000003,
@@ -561,9 +561,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/pulse/10hz.shape"
+        "file": "pulse/10hz.shape"
       },
-      "cssClass": "circuit_digital_pulse_10hz",
+      "cssClass": "digital_pulse_10hz",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,

@@ -1,7 +1,7 @@
 {
   "draw2d": [
     {
-      "type": "circuit_digital_counter_BCDCounter",
+      "type": "digital_counter_BCDCounter",
       "id": "2a67d17d-3064-e595-421b-ed0b794a613b",
       "x": 2673,
       "y": 3003,
@@ -12,9 +12,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/digital/counter/BCDCounter.shape"
+        "file": "digital/counter/BCDCounter.shape"
       },
-      "cssClass": "circuit_digital_counter_BCDCounter",
+      "cssClass": "digital_counter_BCDCounter",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -23,7 +23,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_decoder_BCDto7Seg",
+      "type": "digital_decoder_BCDto7Seg",
       "id": "50d2f0d2-619b-de80-19af-596456cf9d7c",
       "x": 2825,
       "y": 3003,
@@ -34,9 +34,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/digital/decoder/BCDto7Seg.shape"
+        "file": "digital/decoder/BCDto7Seg.shape"
       },
-      "cssClass": "circuit_digital_decoder_BCDto7Seg",
+      "cssClass": "digital_decoder_BCDto7Seg",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -45,7 +45,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_display_7Segment",
+      "type": "digital_display_7Segment",
       "id": "0f889018-8b53-5a08-6b27-7b7edd28ead5",
       "x": 2997,
       "y": 3003,
@@ -56,9 +56,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/digital/display/7Segment.shape"
+        "file": "digital/display/7Segment.shape"
       },
-      "cssClass": "circuit_digital_display_7Segment",
+      "cssClass": "digital_display_7Segment",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -67,7 +67,7 @@
       "labels": []
     },
     {
-      "type": "circuit_digital_pulse_1hz",
+      "type": "digital_pulse_1hz",
       "id": "09e10f1b-d5c2-f103-8a0b-42e2b0c53019",
       "x": 2510,
       "y": 2988,
@@ -78,9 +78,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/digital/pulse/1hz.shape"
+        "file": "digital/pulse/1hz.shape"
       },
-      "cssClass": "circuit_digital_pulse_1hz",
+      "cssClass": "digital_pulse_1hz",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,

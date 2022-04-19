@@ -1,7 +1,7 @@
 {
   "draw2d": [
     {
-      "type": "circuit_digital_pulse_10hz",
+      "type": "digital_pulse_10hz",
       "id": "ad7b5f40-7c44-13d2-0111-8384547f874a",
       "x": 461,
       "y": 472,
@@ -12,7 +12,7 @@
       "draggable": true,
       "angle": 0,
       "userData": {},
-      "cssClass": "circuit_digital_pulse_10hz",
+      "cssClass": "digital_pulse_10hz",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
@@ -33,7 +33,7 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/hardware/arduino/Arduino.shape"
+        "file": "hardware/arduino/Arduino.shape"
       },
       "cssClass": "hardware_arduino_Arduino",
       "bgColor": "rgba(0,0,0,0)",
@@ -67,7 +67,7 @@
       "dasharray": null
     },
     {
-      "type": "circuit_digital_display_Led",
+      "type": "digital_display_Led",
       "id": "3b79f80c-8164-0cf0-e29f-44f07ae98dcb",
       "x": 384.98577880859375,
       "y": 511.8863525390625,
@@ -78,9 +78,9 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/digital/display/Led.shape"
+        "file": "digital/display/Led.shape"
       },
-      "cssClass": "circuit_digital_display_Led",
+      "cssClass": "digital_display_Led",
       "bgColor": "rgba(0,0,0,0)",
       "color": "rgba(27,27,27,1)",
       "stroke": 0,
