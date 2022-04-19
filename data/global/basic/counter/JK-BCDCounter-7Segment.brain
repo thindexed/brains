@@ -62,7 +62,7 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/decoder/BCDto7Seg.shape"
+        "file": "circuit/digital/decoder/BCDto7Seg.shape"
       },
       "cssClass": "circuit_digital_decoder_BCDto7Seg",
       "bgColor": "rgba(0,0,0,0)",
@@ -84,7 +84,7 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/display/7Segment.shape"
+        "file": "circuit/digital/display/7Segment.shape"
       },
       "cssClass": "circuit_digital_display_7Segment",
       "bgColor": "rgba(0,0,0,0)",

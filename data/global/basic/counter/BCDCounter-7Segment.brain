@@ -12,7 +12,7 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/counter/BCDCounter.shape"
+        "file": "circuit/digital/counter/BCDCounter.shape"
       },
       "cssClass": "circuit_digital_counter_BCDCounter",
       "bgColor": "rgba(0,0,0,0)",
@@ -34,7 +34,7 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/decoder/BCDto7Seg.shape"
+        "file": "circuit/digital/decoder/BCDto7Seg.shape"
       },
       "cssClass": "circuit_digital_decoder_BCDto7Seg",
       "bgColor": "rgba(0,0,0,0)",
@@ -56,7 +56,7 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/display/7Segment.shape"
+        "file": "circuit/digital/display/7Segment.shape"
       },
       "cssClass": "circuit_digital_display_7Segment",
       "bgColor": "rgba(0,0,0,0)",
@@ -78,7 +78,7 @@
       "draggable": true,
       "angle": 0,
       "userData": {
-        "file": "circuit/pulse/1hz.shape"
+        "file": "circuit/digital/pulse/1hz.shape"
       },
       "cssClass": "circuit_digital_pulse_1hz",
       "bgColor": "rgba(0,0,0,0)",
