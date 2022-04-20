@@ -20,6 +20,7 @@ echo "Docker Image: $OCIIMAGE"
 echo "Using Domain: $DOMAIN"
 
 
+rm -rf ./src/data
 cp -R ./data/ ./src/data/
 cd src
 
