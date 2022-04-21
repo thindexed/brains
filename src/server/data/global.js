@@ -40,6 +40,18 @@ module.exports = {
                 })
         })
 
+
+        app.get('/brains/global/share', nocache, (req, res) => {
+            github.hash(path.join(conf.absoluteGlobalDataDirectory(), req.query.filePath))
+            .then( sha => {
+                res.status(200).send({ filePath: sha})
+            })
+            .catch(exception => {
+                res.status(403).send("error")
+                console.log(exception)
+            })
+        })
+
         app.get('/brains/global/image', nocache, (req, res) => {
             filesystem.getBinaryFile(conf.absoluteGlobalDataDirectory(), req.query.filePath, res)
                 .catch(error => {

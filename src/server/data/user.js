@@ -43,6 +43,17 @@ module.exports = {
                 })
         })
 
+        app.get('/brains/user/share', nocache, (req, res) => {
+            github.hash(path.join(conf.absoluteUserDataDirectory(req), req.query.filePath))
+            .then( sha => {
+                res.status(200).send({ filePath: sha})
+            })
+            .catch(exception => {
+                res.status(403).send("error")
+                console.log(exception)
+            })
+        })
+
         app.get('/brains/user/image', nocache, ensureLoggedIn, (req, res) => {
             filesystem.getBinaryFile(conf.absoluteUserDataDirectory(req), req.query.filePath, res)
                 .catch(error => {

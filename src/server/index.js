@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 
 const globalApi = require("./data/global")
 const userApi = require("./data/user")
+const sharedApi = require("./data/shared")
 const conf = require("./configuration")
 
 console.log("serving data from :", conf.absoluteGlobalDataDirectory())
@@ -21,6 +22,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}))
 
 globalApi.init(app)
+sharedApi.init(app)
 userApi.init(app)
 
 // =======================================================================
@@ -41,6 +43,5 @@ async function  runServer() {
     console.log("============================================================================")
   });
 }
-
 
 runServer()
